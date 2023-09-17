@@ -12,6 +12,6 @@ const create = z.object({
   }),
 });
 
-export const userValidation = {
+export const authValidation = {
   create,
 };

@@ -13,14 +13,14 @@ datasource db {
 model User {
   id               String            @id @default(uuid())
   name             String
-  email            String
+  email            String            @unique
   password         String
-  role             roles 
+  role             roles
   contactNo        String
   address          String
   profileImg       String
   reviewAndRatings ReviewAndRating[]
-  orders            Order[]
+  orders           Order[]
 
   @@map("users")
 }
@@ -30,6 +30,7 @@ model Category {
   title String
 
   books Book[]
+
   @@map("categories")
 }
 
@@ -44,7 +45,7 @@ model Book {
   categoryId       String
   category         Category          @relation(fields: [categoryId], references: [id])
   reviewAndRatings ReviewAndRating[]
-  
+
   @@map("books")
 }
 
@@ -57,19 +58,18 @@ model ReviewAndRating {
 
   bookId String
   book   Book   @relation(fields: [bookId], references: [id])
-  
+
   @@map("reviewandratings")
 }
-
 
 model Order {
   id           String   @id @default(uuid())
   userId       String
   user         User     @relation(fields: [userId], references: [id])
   orderedBooks Json
-  status       status @default(pending)
+  status       status   @default(pending)
   createdAt    DateTime @default(now())
-  
+
   @@map("orders")
 }
 

@@ -14,6 +14,11 @@
             "date": 1694941200445,
             "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\successes\\phu-2023-17-09-15-success.log",
             "hash": "7e056a825a90e5cd915299c9d8c280e460bd4c4953b50aeeaba3be2f495e468e"
+        },
+        {
+            "date": 1694952093176,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\successes\\phu-2023-17-09-18-success.log",
+            "hash": "28cf063531e8d6ecb6053d841e4a9b210db438f0c5f842158fc74a5c9f5990b5"
         }
     ],
     "hashType": "sha256"

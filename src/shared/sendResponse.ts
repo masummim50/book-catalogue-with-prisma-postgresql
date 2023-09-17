@@ -6,6 +6,7 @@ type apiResponseType<T> = {
   message?: string | null;
   meta?: metaType;
   data?: T | null;
+  token?: string | null;
 };
 type metaType = {
   page: number;
@@ -31,7 +32,8 @@ const sendResponse = <T>(
   success: boolean,
   message: string | null,
   data?: T | null,
-  meta?: metaType
+  meta?: metaType,
+  token?: string | null
 ): void => {
   const responseData: apiResponseType<T> = {
     statusCode: statusCode,
@@ -39,6 +41,7 @@ const sendResponse = <T>(
     message: message || null,
     meta: meta || null || undefined,
     data: data || null || undefined,
+    token: token,
   };
 
   res.status(statusCode).json(responseData);
