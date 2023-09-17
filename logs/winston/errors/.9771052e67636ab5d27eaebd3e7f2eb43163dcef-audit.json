@@ -9,6 +9,11 @@
             "date": 1694934402212,
             "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-17-09-13-error.log",
             "hash": "070f76e9fbacd2f1fa57e3571401bd1291606bc35c8ccd881c3aa97bbdd1f31d"
+        },
+        {
+            "date": 1694941200451,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-17-09-15-error.log",
+            "hash": "e848014c73d6b546f923d6785755f8920e35f6b3bfd60afea3cbb7184a1495d9"
         }
     ],
     "hashType": "sha256"

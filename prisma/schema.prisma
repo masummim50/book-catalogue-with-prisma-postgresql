@@ -15,12 +15,14 @@ model User {
   name             String
   email            String
   password         String
-  role             roles
+  role             roles 
   contactNo        String
   address          String
   profileImg       String
   reviewAndRatings ReviewAndRating[]
   orders            Order[]
+
+  @@map("users")
 }
 
 model Category {
@@ -28,6 +30,7 @@ model Category {
   title String
 
   books Book[]
+  @@map("categories")
 }
 
 model Book {
@@ -41,6 +44,8 @@ model Book {
   categoryId       String
   category         Category          @relation(fields: [categoryId], references: [id])
   reviewAndRatings ReviewAndRating[]
+  
+  @@map("books")
 }
 
 model ReviewAndRating {
@@ -52,15 +57,20 @@ model ReviewAndRating {
 
   bookId String
   book   Book   @relation(fields: [bookId], references: [id])
+  
+  @@map("reviewandratings")
 }
+
 
 model Order {
   id           String   @id @default(uuid())
   userId       String
   user         User     @relation(fields: [userId], references: [id])
   orderedBooks Json
-  status       status
+  status       status @default(pending)
   createdAt    DateTime @default(now())
+  
+  @@map("orders")
 }
 
 enum roles {
