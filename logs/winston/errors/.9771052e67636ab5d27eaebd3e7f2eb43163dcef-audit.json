@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\.9771052e67636ab5d27eaebd3e7f2eb43163dcef-audit.json",
+    "files": [
+        {
+            "date": 1694934402212,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-17-09-13-error.log",
+            "hash": "070f76e9fbacd2f1fa57e3571401bd1291606bc35c8ccd881c3aa97bbdd1f31d"
+        }
+    ],
+    "hashType": "sha256"
+}
