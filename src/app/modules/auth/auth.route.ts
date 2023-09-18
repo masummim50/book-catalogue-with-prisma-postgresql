@@ -10,6 +10,10 @@ router.post(
   validateRequest(authValidation.create),
   authController.createUser
 );
-router.post('/signin', authController.login);
+router.post(
+  '/signin',
+  validateRequest(authValidation.login),
+  authController.login
+);
 
 export const authRoutes = router;
