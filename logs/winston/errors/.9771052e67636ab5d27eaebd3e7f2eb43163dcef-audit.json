@@ -29,6 +29,21 @@
             "date": 1695099852485,
             "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-19-09-11-error.log",
             "hash": "4abd02cebe5b4a1437c6689458f66aa6b5bc1a0817af4c7fac8e0e44325e6bcd"
+        },
+        {
+            "date": 1695133260343,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-19-09-20-error.log",
+            "hash": "89b1e3bbbe3066949dce1894ecde6c45b9ab50d66316a34ff4f094d9c80ab942"
+        },
+        {
+            "date": 1695200613062,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-20-09-15-error.log",
+            "hash": "fdd8f02c19f7e54a0bfd6221f7ee3ab33159c1752358d8263a2878ae55aa4af8"
+        },
+        {
+            "date": 1695216339269,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-20-09-19-error.log",
+            "hash": "fc78339f31fc3978f085c93629259275d1ad0701c8f82eabd391174b9c40150e"
         }
     ],
     "hashType": "sha256"

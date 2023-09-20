@@ -14,7 +14,7 @@ const getCategories = catchAsync(async (req: Request, res: Response) => {
     res,
     httpStatus.OK,
     true,
-    'Categories retrieved Successfully',
+    'Categories Fetched Successfully',
     data
   );
 });
