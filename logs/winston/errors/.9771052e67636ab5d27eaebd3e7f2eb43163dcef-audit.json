@@ -109,6 +109,11 @@
             "date": 1695310684892,
             "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-21-error.log",
             "hash": "05152c5bf396d28d1d873434f6a1beba766d63ef825720d50daf649674d13057"
+        },
+        {
+            "date": 1695312265239,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-22-error.log",
+            "hash": "2c5994bf2a6bcd7341bc5f39d24c2a13d8d1648fe79904902f9c33fe393c755a"
         }
     ],
     "hashType": "sha256"

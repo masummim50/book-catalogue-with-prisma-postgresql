@@ -12,5 +12,7 @@ router.post(
   validateRequest(orderValidation.create),
   orderController.createOrder
 );
+router.get('/', auth('admin', 'customer'), orderController.getAllOrders);
+router.get('/:id', auth('admin', 'customer'), orderController.getOrderById);
 
 export const orderRoutes = router;

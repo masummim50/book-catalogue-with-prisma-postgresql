@@ -1,4 +1,6 @@
 export type orderType = {
-  bookId: string;
-  quantity: number;
+  orderedBooks: {
+    bookId: string;
+    quantity: number;
+  }[];
 };

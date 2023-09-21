@@ -13,6 +13,16 @@ const create = z.object({
   }),
 });
 
+const update = z.object({
+  body: z.object({
+    title: z.string().optional(),
+    author: z.string().optional(),
+    price: z.number().optional(),
+    genre: z.string().optional(),
+  }),
+});
+
 export const bookValidation = {
   create,
+  update,
 };
