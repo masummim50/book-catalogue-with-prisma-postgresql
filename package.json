@@ -10,7 +10,8 @@
     "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "prettier:fix": "prettier --write .",
     "lint-prettier": "yarn lint:check && yarn prettier:check",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "prisma generate"
   },
   "author": "Programming Hero",
   "license": "ISC",
@@ -44,6 +45,7 @@
     "http-status": "^1.7.0",
     "jsonwebtoken": "^9.0.0",
     "prisma": "^5.2.0",
+    "vercel": "^32.2.5",
     "zod": "^3.21.4"
   }
 }
