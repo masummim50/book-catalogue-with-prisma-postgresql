@@ -6,7 +6,6 @@ import sendResponse from '../../../shared/sendResponse';
 import { orderService } from './order.service';
 
 const createOrder = catchAsync(async (req: Request, res: Response) => {
-  console.log('user: ', req.user);
   const userId = req?.user?.userId;
   const paylaod = req.body;
   const data = await orderService.createOrder(userId, paylaod);
@@ -14,7 +13,6 @@ const createOrder = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllOrders = catchAsync(async (req: Request, res: Response) => {
-  console.log(req.user);
   if (req?.user?.role === 'admin') {
     const data = await orderService.getAllOrders();
     sendResponse(

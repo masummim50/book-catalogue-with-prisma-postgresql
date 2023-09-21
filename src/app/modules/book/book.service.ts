@@ -30,7 +30,6 @@ const getBooks = async (
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(options);
   const { minprice, maxprice, category, search } = filters;
-  console.log('filters: ', filters);
   const where: any = {};
 
   if (search) {
@@ -58,7 +57,6 @@ const getBooks = async (
     };
   }
 
-  console.log('where', where);
   const result = await prisma.book.findMany({
     where,
     orderBy: {
@@ -69,7 +67,6 @@ const getBooks = async (
   });
   const count = await prisma.book.count({ where });
   const totalPage = Math.ceil(count / limit);
-  console.log('totalPage: ', totalPage);
 
   return {
     meta: {

@@ -34,7 +34,6 @@ const updateUserById = async (
     },
     data: payload,
   });
-  console.log('after update returns: ', user);
   return excludeFromOne(user, ['password']);
 };
 const deleteUserById = async (id: string) => {

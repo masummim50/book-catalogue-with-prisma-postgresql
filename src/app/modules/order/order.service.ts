@@ -6,7 +6,6 @@ import prisma from '../../../shared/prisma';
 import { orderType } from './order.interface';
 
 const createOrder = async (userId: string, data: orderType): Promise<Order> => {
-  console.log('is data: ', data);
   const bookIds: string[] = [];
 
   data.orderedBooks.forEach(order => {
