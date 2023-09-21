@@ -44,6 +44,71 @@
             "date": 1695216339269,
             "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-20-09-19-error.log",
             "hash": "fc78339f31fc3978f085c93629259275d1ad0701c8f82eabd391174b9c40150e"
+        },
+        {
+            "date": 1695230010828,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-20-09-23-error.log",
+            "hash": "f1baa8ac945acb650453e580ab0b6ec067907377bc5d7fd0e66328bee0ed486b"
+        },
+        {
+            "date": 1695265808804,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-09-error.log",
+            "hash": "67187d02e5d7ef1ef425052e1f5f6f6c49ce4d897635f43d9adedc18f88d1ee4"
+        },
+        {
+            "date": 1695268963717,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-10-error.log",
+            "hash": "da119fae4aa4b053599a179afd74b537a7d7a922ce7bedba0d4b1aa950dcd780"
+        },
+        {
+            "date": 1695274941838,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-11-error.log",
+            "hash": "903cbeac79374afd275ddd5f9d95439089626cbe3683dccfb23e1ca9072d81ba"
+        },
+        {
+            "date": 1695276458398,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-12-error.log",
+            "hash": "f47b118458e972c172a8bfb21a691b849b97107614e8a55de5dbfb588be4759b"
+        },
+        {
+            "date": 1695284855415,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-14-error.log",
+            "hash": "400dff1a31b1f80237c9699c58c80291247d908166629a4ccbc218e271e9c385"
+        },
+        {
+            "date": 1695288899721,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-15-error.log",
+            "hash": "f1117def56c1ee8087d05e3d5f1410bc2cf46e28508db243f55ae8017e436a25"
+        },
+        {
+            "date": 1695290553470,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-16-error.log",
+            "hash": "fe68d37527b87f109cab6c47d6fbb9f2375913920b925de501fbb47b3bba34b4"
+        },
+        {
+            "date": 1695294004143,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-17-error.log",
+            "hash": "9729266e901aac18f13b81de376dfc1ccffa101af536cacdf2bde9c58bcc0eca"
+        },
+        {
+            "date": 1695297737972,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-18-error.log",
+            "hash": "8c1b2e95a4d9d911fabed1b844054dbbc669162ed5087d79579b1f21a6ebce4f"
+        },
+        {
+            "date": 1695304464331,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-19-error.log",
+            "hash": "11b3d569a5934506771c3d8419f21d8b025d88fe1fccf5ee9ed34f8e11207fc7"
+        },
+        {
+            "date": 1695304849358,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-20-error.log",
+            "hash": "880e9101cc6dd5783aabe774fd7fe8a1db5fad88d0f1549d72952444a88556af"
+        },
+        {
+            "date": 1695310684892,
+            "name": "C:\\Users\\Innocent\\Desktop\\book-catalogue-with-prisma\\logs\\winston\\errors\\phu-2023-21-09-21-error.log",
+            "hash": "05152c5bf396d28d1d873434f6a1beba766d63ef825720d50daf649674d13057"
         }
     ],
     "hashType": "sha256"

@@ -6,6 +6,7 @@ import config from '../../config';
 import ApiError from '../../errors/ApiError';
 import handleValidationError from '../../errors/handleValidationError';
 
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { ZodError } from 'zod';
 import handleCastError from '../../errors/handleCastError';
 import handleZodError from '../../errors/handleZodError';
@@ -31,6 +32,18 @@ const globalErrorHandler: ErrorRequestHandler = (
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
+  } else if (error instanceof PrismaClientKnownRequestError) {
+    if (error.code === 'P2002') {
+      const fields: string[] = error.meta?.target as string[];
+      console.log(error);
+      statusCode = 400;
+      let entries = '';
+      fields.forEach(t => (entries = entries + t + ','));
+      message = `duplicate entry - ${entries}`;
+    }
+    if (error.code === 'P2025') {
+      message = error.meta?.cause as string;
+    }
   } else if (error instanceof ZodError) {
     const simplifiedError = handleZodError(error);
     statusCode = simplifiedError.statusCode;

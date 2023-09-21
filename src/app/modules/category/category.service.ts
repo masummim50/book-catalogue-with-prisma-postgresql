@@ -1,4 +1,6 @@
 import { Category } from '@prisma/client';
+import httpStatus from 'http-status';
+import ApiError from '../../../errors/ApiError';
 import prisma from '../../../shared/prisma';
 
 const createCategory = async (data: Category): Promise<Category> => {
@@ -22,6 +24,9 @@ const getCategoryById = async (id: string): Promise<Category | null> => {
       books: true,
     },
   });
+  if (!result) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'category does not exist');
+  }
   return result;
 };
 
@@ -39,12 +44,23 @@ const updateCategoryById = async (
 };
 
 const deleteCategoryById = async (id: string) => {
-  const result = await prisma.category.delete({
-    where: {
-      id,
-    },
+  // in order to delete a category all the books under this category hast to be deleted
+  const batch = await prisma.$transaction(async tx => {
+    await tx.book.deleteMany({
+      where: {
+        categoryId: id,
+      },
+    });
+    // book deleted
+    const result = await tx.category.delete({
+      where: {
+        id,
+      },
+    });
+    return result;
   });
-  return result;
+
+  return batch;
 };
 
 export const categoryService = {

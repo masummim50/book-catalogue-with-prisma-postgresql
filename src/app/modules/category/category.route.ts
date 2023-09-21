@@ -14,7 +14,12 @@ router.post(
 );
 router.get('/', categoryController.getCategories);
 router.get('/:id', categoryController.getCategoryById);
-router.patch('/:id', auth('admin'), categoryController.updateCategoryById);
+router.patch(
+  '/:id',
+  auth('admin'),
+  validateRequest(categoryValidation.update),
+  categoryController.updateCategoryById
+);
 router.delete('/:id', auth('admin'), categoryController.deleteCategoryById);
 
 export const categoryRoutes = router;

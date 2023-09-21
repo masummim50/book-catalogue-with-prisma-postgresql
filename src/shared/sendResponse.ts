@@ -10,8 +10,9 @@ type apiResponseType<T> = {
 };
 type metaType = {
   page: number;
-  limit: number;
+  size: number;
   total: number;
+  totalPage?: number;
 };
 
 // const sendResponse = <T>(res: Response, data: IApiReponse<T>): void => {
@@ -36,8 +37,8 @@ const sendResponse = <T>(
   token?: string | null
 ): void => {
   const responseData: apiResponseType<T> = {
-    statusCode: statusCode,
     success: success,
+    statusCode: statusCode,
     message: message || null,
     meta: meta || null || undefined,
     data: data || null || undefined,

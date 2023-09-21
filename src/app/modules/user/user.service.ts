@@ -1,18 +1,27 @@
 import { User } from '@prisma/client';
+import httpStatus from 'http-status';
+import ApiError from '../../../errors/ApiError';
+import { exclude, excludeFromOne } from '../../../shared/excludeFunction';
 import prisma from '../../../shared/prisma';
 
-const getAllUsers = async (): Promise<User[]> => {
+const getAllUsers = async (): Promise<Partial<User>[]> => {
   const users = await prisma.user.findMany();
-  return users;
+  const reformed = await exclude(users, ['password']);
+  return reformed;
 };
 
-const getUserById = async (id: string): Promise<User | null> => {
+const getUserById = async (id: string): Promise<Partial<User> | null> => {
   const user = await prisma.user.findUnique({
     where: {
       id,
     },
   });
-  return user;
+  let reformed = {};
+  if (!user) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'User not found');
+  }
+  reformed = await excludeFromOne(user, ['password']);
+  return reformed;
 };
 
 const updateUserById = async (
@@ -26,7 +35,7 @@ const updateUserById = async (
     data: payload,
   });
   console.log('after update returns: ', user);
-  return user;
+  return excludeFromOne(user, ['password']);
 };
 const deleteUserById = async (id: string) => {
   const user = await prisma.user.delete({
@@ -34,7 +43,7 @@ const deleteUserById = async (id: string) => {
       id,
     },
   });
-  return user;
+  return excludeFromOne(user, ['password']);
 };
 
 export const userService = {
