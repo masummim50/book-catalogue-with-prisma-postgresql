@@ -1,70 +1,37 @@
-# University Management Core Service
-This guide will walk you through the process of setting up the University Management Core Service Starter project. By following these steps, you will clone the project, install dependencies, and configure Prisma for database management. Let's get started!
 
+### Live Link: https://book-catalogue-with-prisma.vercel.app/
 
-## Installation Steps
-### Follow these steps to clone and set up starter project:
+### Application Routes:
 
-1. `Clone the project:` Open your terminal or command prompt and run the following command to clone the project repository:
+#### User
 
-```bash
-git clone https://github.com/Programming-Hero-Next-Level-Development/university-management-core-service-starter.git university-management-core-service
-```
+- https://book-catalogue-with-prisma.vercel.app/api/v1/auth/signup (POST)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/auth/signin (POST)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/users (GET)(only admin)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/users/d99194e0-b125-463a-b6b7-1d9d3d337bc6 (Single GET) (only admin)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/users/f5c1d13b-8de2-43ec-a97c-fbcebcbf7191 (PATCH)(only admin)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/users/f5c1d13b-8de2-43ec-a97c-fbcebcbf7191 (DELETE) (only admin)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/profile (GET)(must send token in headers)
 
-2. `Navigate into the project directory:` Use the cd command to navigate into the project directory:
+### Category
 
-```bash
-cd university-management-core-service
-```
+- https://book-catalogue-with-prisma.vercel.app/api/v1/categories/create-category (POST)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/categories (GET)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/categories/892d2315-eed8-4772-8107-6cffb3a10dd6 (Single GET)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/categories/eeb78652-8c49-4db9-90b2-60b8963366b1 (PATCH)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/categories/eeb78652-8c49-4db9-90b2-60b8963366b1 (DELETE)
 
-3. `Install project dependencies:` Next, install the project dependencies by running the following command:
+### Books
 
-```bash
-yarn install
-```
+- https://book-catalogue-with-prisma.vercel.app/api/v1/books/create-book (POST)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/books (GET)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/books/892d2315-eed8-4772-8107-6cffb3a10dd6/category (GET)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/books/9d0364e1-8741-41f9-8d4d-d7eab353d23d (GET)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/books/4de40728-7d0d-419d-81b4-95302df3b621 (PATCH)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/books/b8a03ab2-f651-4d20-a93b-2edf4f5baac9 (DELETE)
 
-4. Configure Prisma and the database connection:
+### Orders
 
-- Add Prisma as a development dependency by running the following command:
-```bash
-yarn add prisma --save-dev
-```
-
-- Set up your Prisma project by creating the Prisma schema file using the following command:
-```bash
-npx prisma init
-```
-
-- Open the prisma/schema.prisma file and configure your database connection details.
-
-```bash
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-```
-
-- Create a .env file in the project root directory and set the DATABASE_URL environment variable. Replace the placeholders with your database connection details:
-```bash
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
-```
-
-5. Creating the database schema
-6. Migrate the database schema: Use the following command to create and apply the initial database schema:
-
-```bash
-npx prisma migrate dev --name init
-```
-This command creates a new migration file based on your schema changes and applies it to your database.
-
-6. `Install Prisma Client:` Install the Prisma Client library by running the following command:
-```bash
-yarn add @prisma/client
-```
-
-This command installs the Prisma Client, which provides an interface to interact with your database.
-
-That's it! You have successfully set up the University Management Core Service Starter project. You can now start exploring and working with the codebase. Refer to the project documentation or README for further instructions on how to run and use the core service.
-
-Happy coding!# university-management-core-services
-# book-catalogue-with-prisma-postgresql
+- https://book-catalogue-with-prisma.vercel.app/api/v1/orders/create-order (POST)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/orders (GET) (if admin gets all orders, if customer gets customer specific orders)
+- https://book-catalogue-with-prisma.vercel.app/api/v1/orders/c049b9f8-e539-4aa0-b47d-28f7f64ca816 (GET)
